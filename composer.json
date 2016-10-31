@@ -1,0 +1,19 @@
+{
+    "name": "phbench/phbench",
+    "description": "A benchmark component",
+    "type": "Library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ouranoshong",
+            "email": "ouranoshong@outlook.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "PhMessage\\": "./libs"
+        },
+        "files": ["libs/functions_include.php"]
+    }
+}
