@@ -29,11 +29,7 @@ class Benchmark
     protected  $temporary = [];
 
 
-    /**
-     * @param      $identifier
-     * @param bool $temporary_benchmark
-     */
-    public function start($identifier, $temporary_benchmark = false)
+    public function start($identifier, $temporaryBenchmark = false)
     {
         $this->startTimes[$identifier] = $this->getMicroTime();
 
@@ -43,9 +39,14 @@ class Benchmark
             $this->startCount[$identifier] = 1;
         }
 
-        if ($temporary_benchmark == true) {
+        if ($temporaryBenchmark == true) {
             $this->temporary[$identifier] = true;
         }
+
+        return [
+            $this->startTimes[$identifier],
+            $this->startCount[$identifier]
+        ];
     }
 
     /**
