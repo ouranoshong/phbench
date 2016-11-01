@@ -67,3 +67,8 @@ function get_elapsed_time($identify)
 {
     return benchmark()->getElapsedTime($identify);
 }
+
+function get_call_count($identify)
+{
+    return benchmark()->getCallCount($identify);
+}

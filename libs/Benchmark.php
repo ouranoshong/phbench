@@ -56,7 +56,11 @@ class Benchmark
      */
     public function getCallCount($identifier)
     {
-        return $this->startCount[$identifier];
+        if (isset($this->startCount[$identifier])) {
+            return $this->startCount[$identifier];
+        }
+
+        return 0;
     }
 
     /**
@@ -170,11 +174,4 @@ class Benchmark
         return microtime(true);
     }
 
-    /**
-     * @return array
-     */
-    public function getTemporary()
-    {
-        return $this->temporary;
-    }
 }

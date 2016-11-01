@@ -12,8 +12,11 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "PhMessage\\": "./libs"
+            "PhBench\\": "./libs"
         },
         "files": ["libs/functions_include.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6"
     }
 }
