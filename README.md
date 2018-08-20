@@ -7,7 +7,7 @@
 
 A component of benchmark
 
-##Installation
+## Installation
 ```bash
 composer require phbench/phbench
 ```
